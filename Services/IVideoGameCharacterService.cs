@@ -7,8 +7,8 @@ namespace VideoGameCharacterApi.Services
     {
         Task<List<CharacterRespone>> GetAllCharactersAsync();
         Task<CharacterRespone?> GetCharacterByIdAsync(int id);
-        Task<CharacterRespone> AddCharacterAsync(Character character);
-        Task<bool> UpdateCharacterAsync(int id,Character character);
+        Task<CharacterRespone> AddCharacterAsync(CreateCharacterResponse character);
+        Task<bool> UpdateCharacterAsync(int id,UpdateCharacterResponse character);
         Task<bool> DeleteCharacterAsync(int id);
     }
 }
