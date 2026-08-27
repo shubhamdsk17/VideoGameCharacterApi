@@ -1,12 +1,13 @@
-﻿using VideoGameCharacterApi.Models;
+﻿using VideoGameCharacterApi.Dtos;
+using VideoGameCharacterApi.Models;
 
 namespace VideoGameCharacterApi.Services
 {
     public interface IVideoGameCharacterService
     {
-        Task<List<Character>> GetAllCharactersAsync();
-        Task<Character?> GetCharacterByIdAsync(int id);
-        Task<Character> AddCharacterAsync(Character character);
+        Task<List<CharacterRespone>> GetAllCharactersAsync();
+        Task<CharacterRespone?> GetCharacterByIdAsync(int id);
+        Task<CharacterRespone> AddCharacterAsync(Character character);
         Task<bool> UpdateCharacterAsync(int id,Character character);
         Task<bool> DeleteCharacterAsync(int id);
     }
